@@ -1,6 +1,206 @@
 /* Small devices (phones, less than 768px) */
-@media only screen and (max-width: 768px) and (min-width:320px){}
+@media screen and (max-width: 768px) and (min-width:320px){
+    body {
+        min-width: 320px;
+        max-width: 768px;
+        padding: 0 ;  
+    }
 
+    .main-container {
+        padding: 0;
+    }
+    
+/****** HEADER ***********/
 
-/*<FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /> loupe*/ 
+    main {
+        padding: 0 20px;
+    }
+    .logo-booki {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        margin-bottom: 80px;
+    }
+    
+    #menu a:hover{
+        
+        border-top: none; /* supprime la bordure en haut */
+        padding-top: 0; /* evite le texte qui bouge*/
+    }
+
+    #menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul#menu {
+        max-width: 768px;
+        width: 100%;
+    }
+
+    nav {
+        max-width: 768px;
+        width: 100%;
+        min-width: 320px;
+    }
+    #menu a {
+        position: relative;
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+    }
+      
+    #menu a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20px; /* distance entre le lien et le trait */
+        width: 50vw;
+        height: 2px;
+        background-color: #0065FC;
+        opacity: 0;
+    }
+      
+    #menu a:hover::after {
+        opacity: 1;
+    }
+      
+      
+/****** BARRE DE RECHERCHE ***********/
+
+   .desktop-only {
+        display: none;
+    }
+    
+    .mobile-only {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: #0065FC;
+        border: none;
+        border-radius: 15px;
+        height: 50px;
+        width: 50px;
+        margin-left: -5px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .formulaire {
+        min-width: 320px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .barre-de-recherche {
+        margin: auto;
+    }
   
+/****** FILTRE ET BOUTONS ***********/
+
+
+    .titre-filtre {
+        flex-direction: column;
+        min-width: 320px;
+        max-width:768px;
+    }
+
+    .quatre-boutons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;/*si je passe a15 les elements serait en colonne*/
+        height: auto;
+    }
+
+    .boutons {
+        flex: 1 0 calc(50% - 5px); /* flex-grow, flex-shrink, flex-basis */
+        min-width: 120px; /* largeur minimale pour éviter une trop grande déformation et a 425px les elements se mette en colonne */
+        justify-content: center;/*centrer a l'interieur des boutons*/
+    }
+
+    .boutons p {
+        white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    }
+
+/****** HEBERGEMENTS ET POPULAIRES ***********/
+
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+/****** POPULAIRES ***********/
+
+    .populaires {
+       margin: 0;
+    }
+
+    section.populaires{
+        border-radius: 0;
+    }
+
+    .populaires-cards {
+       display: block;
+       width: 100%;
+    }
+ 
+
+/****** HEBERGEMENTS ***********/
+    .hebergements-cards .card {
+        width: 100%;
+        height: 210px;
+        min-width: 335px;
+    }
+
+    .hebergements-cards {
+        display: block;
+    }
+
+    section.hebergements {
+        background-color: #fff;
+    }
+  
+/****** ACTIVITES A MARSEILLE ***********/  
+
+    .activites-cards .card {
+        padding: 0px;
+        margin: 30px 0;
+        width: 100%;
+        max-height: 200px;
+    }  
+    
+    .activites-cards img {
+        max-height: 150px;
+    }
+            
+    .activites-cards {
+        display:block;
+    }
+
+/****** FOOTER ***********/
+
+    footer {
+       display: block;
+    }
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+

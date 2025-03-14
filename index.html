@@ -12,9 +12,11 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/telephone.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/tablette.css">
-    <link rel="stylesheet" href="./css/style.css"><!--ajout de la feuille de style-->
+    <link rel="stylesheet" href="./css/telephone.css">
+    
+    
 </head>
 <body>
     <div class="main-container">
@@ -25,9 +27,11 @@
             </div>
             <nav>
                 <ul id="menu">
-                    <li><a href="#">Hébergements</a></li>
-                    <li><a href="#">Activités</a></li>
-                </ul> </header>
+                    <li><a href="#hebergements">Hébergements</a></li>
+                    <li><a href="#activites">Activités</a></li>
+                </ul>
+            </nav>
+        </header>
         <main>
             <section>
                 <div class="titre-1"><h1>Trouvez votre hébergement pour des vacances de rêve</h1>
@@ -35,25 +39,27 @@
                 </div>
                 <div class="barre-de-recherche">
                     <form class="formulaire" method="get" action="#">
-                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                        <input class="recherchem" type="search" name="point-de-localisation" placeholder="Marseille, France">
-                        <input class="rechercherr" type="submit" value="Rechercher"> 
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input class="recherche-marseille" type="search" name="point-de-localisation" placeholder="Marseille, France">   
+                        <input class="rechercher-bouton desktop-only" type="submit" value="Rechercher">
+                        <!--changement==> <i en button pour la version mobile-->
+                        <button class="fa-solid fa-magnifying-glass mobile-only" type="submit" aria-label="Rechercher"></button>
                     </form>
                 </div>
                 <div class="titre-filtre">
                     <p>Filtres</p>
                  <div class="quatre-boutons">
                     <div class="boutons">
-                        <p><i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>Economique</p>
+                        <p><i class="fa-solid fa-money-bill-wave"></i>Economique</p>
                     </div>
                     <div class="boutons">
-                        <p><i class="fa-solid fa-person" aria-hidden="true"></i>Familial</p>
+                        <p><i class="fa-solid fa-person" ></i>Familial</p>
                     </div>
                     <div class="boutons">
-                        <p><i class="fa-solid fa-heart" aria-hidden="true"></i>Romantique</p>
+                        <p><i class="fa-solid fa-heart"></i>Romantique</p>
                     </div>
                     <div class="boutons">
-                        <p><i class="fa-solid fa-fire" aria-hidden="true"></i>Nos pépites</p>
+                        <p><i class="fa-solid fa-fire"></i>Nos pépites</p>
                     </div>
                  </div>
                 </div>
@@ -324,6 +330,6 @@
                  </ul>
             </div>
         </footer>
-    </div><!--main-container-->
+    </div>
   </body>
 </html>

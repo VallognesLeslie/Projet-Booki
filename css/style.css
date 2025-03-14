@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
@@ -16,13 +17,14 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .main-container {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    box-sizing: border-box;
+    
 }
 
 a {
@@ -62,7 +64,8 @@ a {
 /****** HEADER ***********/
 
 header {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 80px;
     display: flex;/*sans, le menu reste en dessous du logo*/
     justify-content: space-between;/*mettre tout a droite le menu*/
@@ -136,7 +139,7 @@ i.fa-solid.fa-location-dot {
     font-size: 18px;/* pour modifier la grosseur du logo*/
 }
 
-input.recherchem {
+input.recherche-marseille {
     border-left: none;/*enlever la bordure de gauche noir de base*/
     border-right: none;/*enlever la bordure de droite noir de base*/
     border-top: solid 1px #F2F2F2;/*epaisseur et couleur de la barre de recherche en haut*/
@@ -146,10 +149,10 @@ input.recherchem {
     font-weight: 700;
     text-align: center;/*centrer le marseille, france*/
     height: 50px;/*hauteur de la barre de recherche*/
-    
+    margin-left: -5px;/*pour supprimer l'espace entre la case de location et la recherche*/
 }
 
-input.rechercherr {
+input.rechercher-bouton {
     font-size: 18px;
     font-weight: 700;
     background-color: #0065FC;
@@ -161,12 +164,24 @@ input.rechercherr {
     cursor: pointer;/*au survole le curseur change*/
     padding-left: 15px;
     padding-right: 15px;
+    margin-left: -5px;/*pour supprimer l'espace entre le bouton "rechercher" et la recherche*/
 }
- 
- 
+/*uniquement pour la version telephone*/
+                .desktop-only {
+                    display: inline-block;
+                }
+
+                .mobile-only {
+                    display: none;
+                }
+                .formulaire {
+                    display: flex;/*permet de mettre tous les éléments sur une seule ligne*/
+                   
+                }
+
  /****** FILTRE ET BOUTONS ***********/
  
- .titre-filtre {
+.titre-filtre {
     display: flex;/*alligner côte a côte "fitres" et les bouttons*/
     gap: 15px;/*espacement entre filtres et boutons*/
     margin-top: 40px;/* espacement entre la barre de recherche et les filtres*/
@@ -174,16 +189,14 @@ input.rechercherr {
 
 .quatre-boutons {
    display: flex;/*pour que les boutons soit côte a côte et pas l'un en dessous des autres*/
+   gap: 15px;/*espace entre les boutons*/
+   height: 50px;/*hauteur des boutons*/
 }
+
 
 p {
     font-size: 18px;
     font-weight: 700;
-}
-
-.quatre-boutons {
-    gap: 15px;/*espace entre les boutons*/
-    height: 50px;/*hauteur des boutons*/
 }
 
 .boutons {
@@ -445,3 +458,5 @@ footer a {
     display: block; 
     margin-bottom: 10px; 
 }
+ 
+
