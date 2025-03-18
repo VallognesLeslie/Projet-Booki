@@ -24,7 +24,6 @@ body {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    
 }
 
 a {
@@ -60,7 +59,6 @@ a {
     color: var(--main-bg-color)
 }
 
-
 /****** HEADER ***********/
 
 header {
@@ -71,55 +69,53 @@ header {
     justify-content: space-between;/*mettre tout a droite le menu*/
     align-items: center;/*center le logo avec le menu*/
     margin-top: -4px;/*pour que la bordure bleu soit coler en haut*/
-  
-  }
+}
  
- .logo-booki {
+.logo-booki {
     width: 160px;
     height: 80px;/*separation du titre h1 et le logo*/
     margin-top: 50px;/*regler la marge du haut pour le logo*/
      
- }
+}
  
- .logo-booki img {/*taille de l'image*/
+.logo-booki img {/*taille de l'image*/
      width: 61.09px;
      height: 19px;
- }
+}
  
- #menu {
+#menu {
      display: flex;/*sans, hebergements et activite resterais en colonnes*/
      gap: 68px;/*espace entre hebergements et activites*/
      list-style: none;/*enlever les puces*/
      width: 344px;
      height: 35px;
      padding: 0px 50px;
- }
+}
      
- #menu a:hover {
+#menu a:hover {
      color: #0065FC;/*le menu passe en bleu au survole*/
      border-top: solid 2px #0065FC;/*l'epaisseur de la bordure au survole*/
      padding-top: 16px;/*espace entre la hauteur du site et le menu*/
      font-size: 16px;
      font-weight: 400;
-  }
+}
  
  /****** TITRE PRINCIPAL ***********/
 
- h1 {
+h1 {
      font-weight: 700;
      font-size: 22px;
      color: #000;
      margin-top: 30px;/*espace entre le logo et le titre*/
      margin-bottom: -5px;/*espace entre le h1 et le paragraphe*/
     
- }
+}
  .titre-1 p {
-     
     font-weight: 400;
     font-size: 16px;
     color: #000;
-     
- }
+}
+
  /****** BARRE DE RECHERCHE ***********/
 
 .barre-de-recherche {
@@ -127,6 +123,7 @@ header {
     margin-top: 40px;/*espcae entre le titre et la barre de recherche*/
     height: 50px;
 }
+
 i.fa-solid.fa-location-dot {
     color: #000000;
     background-color: #F2F2F2;/*couleur de fond*/
@@ -174,9 +171,9 @@ input.rechercher-bouton {
                 .mobile-only {
                     display: none;
                 }
+
                 .formulaire {
                     display: flex;/*permet de mettre tous les éléments sur une seule ligne*/
-                   
                 }
 
  /****** FILTRE ET BOUTONS ***********/
@@ -216,24 +213,25 @@ p {
     font-size: 22px;/*pour la grosseur du logo*/
     padding-right: 10px;/*espace du logo et du texte*/
 }
+
  /****** INFORMATION ***********/
  
- .information {
+.information {
      display: flex;/*que le logo et le texte soit côte a côte*/
      height: 25px;
      gap: 10px ;/* espace entre le logo et le texte*/
      align-items: center;/*pour que le logo et le texte soit alligner*/
      margin-bottom: 30px;/*espace du bas avec la prochaine section*/
      margin-top: 30px;/*espace avec la "div" des filtres*/
- }
- .information p {
+}
+.information p {
      height: 20px;
      color: #000;
      font-size: 16px;
      font-weight: 400;
- }
+}
  
- .fa-info {
+.fa-info {
      height: 20px;
      width: 20px;
      border-radius: 50%;/*pour faire un rond*/
@@ -241,14 +239,13 @@ p {
      font-size: 10px;/*pour la grosseur du "i"*/
      text-align: center;/*sans, il serait centrer a gauche du rond*/
      align-content: center;/*sans, il serait centrer en haut du rond*/
- }
+}
 
 /****** Hebergements And Populaires ***********/
 
 .hebergements-and-populaires {
     display: flex;/*hebergement et populaires soit côte a côte*/
     justify-content: space-between;/* sans ce n'est pas aerer, les 2 sections sont coller*/
-  
 }
 
 .hebergements-and-populaires section {
@@ -260,13 +257,10 @@ p {
 
 /****** Hebergements ***********/
 
-
-
 .hebergements-cards {
     display: grid;/*utilisation de grid car il y a plusieurs cards(tout les enfants deviennent des elements de la grille)*/
     grid-template-columns: repeat(3, 1fr);/*3 colonnes de tailles egales, fr divise l'espace disponible proportionnellement*/
     gap: 20px; 
-    
 }
 
 .hebergements-cards .card {
@@ -291,13 +285,10 @@ p {
 
 .hebergements-cards .card-content {
     padding: 15px;
-    
 }
 
 .hebergements-cards .card-title {
     margin: 0;
-    
-    
 }
 
 .hebergements-cards .card-subtitle {
@@ -305,7 +296,6 @@ p {
     color: #000;
     font-size: 14px;
     font-weight: 400;
-
 }
 
 .afficher-plus {
@@ -328,14 +318,13 @@ p {
     display: flex;
     flex-direction: column;
     gap: 20px;
-   
 }
+
 .populaires-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-}
+ }
 
 .populaires-cards .card {
     display: flex;
@@ -387,7 +376,6 @@ p {
     color: #000;
     margin: 40px;
     flex-direction: column;
-    
 }
 
 .activites-cards {
@@ -395,7 +383,6 @@ p {
     gap: 30px;
     margin-top: 20px;
     justify-content: space-evenly;
-
 }
 
 .activites-cards .card {
@@ -429,6 +416,7 @@ p {
 
 
 /****** FOOTER ***********/
+
 footer {
     
     background-color: #F2F2F2;
@@ -449,7 +437,6 @@ footer {
     margin: 0;
     list-style: none;
 }
-
 
 footer a {
     font-weight: 400;

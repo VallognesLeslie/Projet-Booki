@@ -49,33 +49,30 @@
         min-width: 320px;
     }
     #menu a {
-        position: relative;
-        text-decoration: none;
-        color: black;
-        display: inline-block;
+        position: relative;/*pour que les elements positionne en absolu a l'interieur comme "after" se basent sur lui comme repere*/
     }
       
     #menu a::after {
-        content: "";
-        position: absolute;
+        content: "";/*je doit quand meme l'utiliser meme avec rien a l'interieur sinon "after" n'existerais pas*/
+        position: absolute;/* place le petit trait en position absolue par rapport au lien grace au position relative au dessus*/
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%);/* Décale le trait vers la gauche de 50% de sa propre largeur, pour vraiment centrer sinon il serai a gauche*/
         bottom: -20px; /* distance entre le lien et le trait */
-        width: 50vw;
-        height: 2px;
+        width: 250px;/*longueur du trait*/
+        height: 2px;/*epaisseur du trait*/
         background-color: #0065FC;
-        opacity: 0;
+        opacity: 0;/*pour rendre le trait invisible*/
     }
       
     #menu a:hover::after {
-        opacity: 1;
+        opacity: 1;/*rend le trait visible au survol*/
     }
       
       
 /****** BARRE DE RECHERCHE ***********/
 
    .desktop-only {
-        display: none;
+        display: none;/*supprime le bouton rechercher pour faire place a la loupe*/
     }
     
     .mobile-only {
@@ -154,12 +151,7 @@
  
 
 /****** HEBERGEMENTS ***********/
-    .hebergements-cards .card {
-        width: 100%;
-        height: 210px;
-        min-width: 335px;
-    }
-
+  
     .hebergements-cards {
         display: block;
     }
