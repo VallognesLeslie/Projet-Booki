@@ -18,13 +18,16 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
+   
 }
 
 .main-container {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
+
 }
+
 
 a {
     color: inherit;
@@ -63,7 +66,6 @@ a {
 
 header {
     width: 100%;
-    max-width: 1440px;
     height: 80px;
     display: flex;/*sans, le menu reste en dessous du logo*/
     justify-content: space-between;/*mettre tout a droite le menu*/
@@ -79,8 +81,8 @@ header {
 }
  
 .logo-booki img {/*taille de l'image*/
-     width: 61.09px;
-     height: 19px;
+     width:62px;
+     height: 20px;
 }
  
 #menu {
@@ -190,7 +192,6 @@ input.rechercher-bouton {
    height: 50px;/*hauteur des boutons*/
 }
 
-
 p {
     font-size: 18px;
     font-weight: 700;
@@ -223,20 +224,23 @@ p {
      align-items: center;/*pour que le logo et le texte soit alligner*/
      margin-bottom: 30px;/*espace du bas avec la prochaine section*/
      margin-top: 30px;/*espace avec la "div" des filtres*/
+
 }
 .information p {
-     height: 20px;
+     height: 25px;
      color: #000;
      font-size: 16px;
      font-weight: 400;
+     display: flex;
+     align-items: center;
 }
  
 .fa-info {
-     height: 20px;
-     width: 20px;
+     height: 25px;
+     width: 25px;
      border-radius: 50%;/*pour faire un rond*/
      border: solid 1px #d9d9d9;/*couleur et lepaisseur de la bordure*/
-     font-size: 10px;/*pour la grosseur du "i"*/
+     font-size: 12px;/*pour la grosseur du "i"*/
      text-align: center;/*sans, il serait centrer a gauche du rond*/
      align-content: center;/*sans, il serait centrer en haut du rond*/
 }
@@ -246,49 +250,65 @@ p {
 .hebergements-and-populaires {
     display: flex;/*hebergement et populaires soit côte a côte*/
     justify-content: space-between;/* sans ce n'est pas aerer, les 2 sections sont coller*/
+    gap: 50px;
 }
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
 
+.hebergements-title {
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+.hebergements {
+    overflow: hidden;
+}
+
 .hebergements-cards {
-    display: grid;/*utilisation de grid car il y a plusieurs cards(tout les enfants deviennent des elements de la grille)*/
-    grid-template-columns: repeat(3, 1fr);/*3 colonnes de tailles egales, fr divise l'espace disponible proportionnellement*/
-    gap: 20px; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .hebergements-cards .card {
-    margin-top: 33px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;  /* Make all cards the same height */
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* centrer,ombarage et floutage/ rgba: couleur noir transparente a 10%*/
-    overflow: hidden; /*evite que l'image depasse des bordures*/ 
-    transition: transform 0.3s ease-in-out; /* effet de lenteur au survole*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    background-color: white; /* Add background color */
 }
 
 .hebergements-cards .card:hover {
-    transform: scale(1.03); /*effet d'agrandissement au survole*/
+    transform: scale(1.03);
 }
 
 .hebergements-cards img {
-    width: 100%;/* pour que l'image rentre bien dans la cards avec la bordure, moins de pourcentage l'image ne serait pas proportionnelle ici elle serait retrecit*/
-    height: 120px; 
-    object-fit: cover;/*il vas avec width : 100%, sans lui l'image serait ecraser ou etirer*/
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
     border-top-left-radius: 20px;
-    border-top-right-radius: 20px; 
+    border-top-right-radius: 20px;
 }
 
 .hebergements-cards .card-content {
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow content to expand */
 }
 
 .hebergements-cards .card-title {
     margin: 0;
+    font-size: 16px;
 }
 
 .hebergements-cards .card-subtitle {
@@ -301,7 +321,7 @@ p {
 .afficher-plus {
     width: 810px;
     height: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .afficher-plus a {
@@ -312,6 +332,7 @@ p {
 /****** Populaires ***********/
 .populaires {
     width: 32%;
+    min-width: 290px;
 }
 
 .populaires-cards {
@@ -370,26 +391,20 @@ p {
 /****** ACTIVITES A MARSEILLE ***********/
 
 .activites {
-
-    font-weight: 700;
-    font-size: 22px;
-    color: #000;
-    margin: 40px;
-    flex-direction: column;
+    padding: 30px;
+    max-width: 1440px;
 }
 
 .activites-cards {
     display: flex;
     gap: 30px;
     margin-top: 20px;
-    justify-content: space-evenly;
 }
 
 .activites-cards .card {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;  
     transition: transform 0.3s ease-in-out; 
-    width: 280px;
     padding: 0px;/*pour enlever la bordure blanche autour de l'image*/
 }
 
@@ -397,6 +412,11 @@ p {
     transform: scale(1.03); 
 }
 
+.activites-card-txt {
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
 .activites-cards img {
     width: 100%; 
     height: 380px;
@@ -409,11 +429,9 @@ p {
     margin-left: 15px;
 }
 
-.activites-cards .card-title {
-    font-weight: 700;
-    font-size: 16px;
+a.marseille {
+    width: 30%;
 }
-
 
 /****** FOOTER ***********/
 

@@ -1,8 +1,8 @@
 /* Small devices (phones, less than 768px) */
-@media screen and (max-width: 768px) and (min-width:320px){
+@media screen and (max-width: 769px){
     body {
         min-width: 320px;
-        max-width: 768px;
+        max-width: 769px;
         padding: 0 ;  
     }
 
@@ -15,60 +15,62 @@
     main {
         padding: 0 20px;
     }
+    
     .logo-booki {
         text-align: center;
         margin-bottom: 15px;
+        margin-top: 30px;
+    }
+
+    .logo-booki img {
+        height: 20px;
+        width: 65px;
     }
 
     header {
         display: flex;
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
         margin-bottom: 80px;
     }
     
-    #menu a:hover{
-        
-        border-top: none; /* supprime la bordure en haut */
-        padding-top: 0; /* evite le texte qui bouge*/
+    nav {
+        width: 100%;
     }
-
-    #menu {
+    
+    ul#menu {
         display: flex;
         justify-content: space-between;
-    }
-
-    ul#menu {
-        max-width: 768px;
         width: 100%;
+        padding: 0;
+        margin: 0;
+     }
+    
+    #menu li {
+        flex: 1;
+        text-align: center;
     }
-
-    nav {
-        max-width: 768px;
-        width: 100%;
-        min-width: 320px;
-    }
+    
     #menu a {
-        position: relative;/*pour que les elements positionne en absolu a l'interieur comme "after" se basent sur lui comme repere*/
+        display: block;
+        padding: 15px 0;
+        position: relative;
     }
-      
-    #menu a::after {
-        content: "";/*je doit quand meme l'utiliser meme avec rien a l'interieur sinon "after" n'existerais pas*/
-        position: absolute;/* place le petit trait en position absolue par rapport au lien grace au position relative au dessus*/
-        left: 50%;
-        transform: translateX(-50%);/* Décale le trait vers la gauche de 50% de sa propre largeur, pour vraiment centrer sinon il serai a gauche*/
-        bottom: -20px; /* distance entre le lien et le trait */
-        width: 250px;/*longueur du trait*/
-        height: 2px;/*epaisseur du trait*/
-        background-color: #0065FC;
-        opacity: 0;/*pour rendre le trait invisible*/
+   
+    #menu a:hover {
+       
+        border-top: none; /* Remove any top border on hover */
     }
-      
+    
     #menu a:hover::after {
-        opacity: 1;/*rend le trait visible au survol*/
+        content: "";
+        position: absolute;
+        bottom: -1px; /* Position it to overlap the gray line */
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #0065FC;
     }
-      
-      
+    
 /****** BARRE DE RECHERCHE ***********/
 
    .desktop-only {
@@ -92,21 +94,29 @@
 
     .formulaire {
         min-width: 320px;
-        width: 100%;
         max-width: 100%;
     }
 
     .barre-de-recherche {
         margin: auto;
     }
-  
-/****** FILTRE ET BOUTONS ***********/
 
+    input.recherche-marseille {
+        max-width: 200px;
+    }
+
+/****** IITRE H1 ***********/  
+
+    .titre-1 {
+        margin-top: -20px;
+    }
+    
+/****** FILTRE ET BOUTONS ***********/
 
     .titre-filtre {
         flex-direction: column;
-        min-width: 320px;
-        max-width:768px;
+        margin-top: 15px;/*espace entre la barre de recherche et filtres*/
+       
     }
 
     .quatre-boutons {
@@ -114,23 +124,33 @@
         flex-wrap: wrap;
         gap: 10px;/*si je passe a15 les elements serait en colonne*/
         height: auto;
+        margin-top: -15px;/*espace entre filtres et les boutons*/
     }
 
     .boutons {
-        flex: 1 0 calc(50% - 5px); /* flex-grow, flex-shrink, flex-basis */
-        min-width: 120px; /* largeur minimale pour éviter une trop grande déformation et a 425px les elements se mette en colonne */
+        flex: 1 0 calc(50% - 5px); /* flex-grow peut grandir pour remplir l’espace disponible, flex-shrink élément ne rétrécit pas si l’espace manque, flex-basisa taille de base de l’élément (environ la moitié du conteneur, moins l’écart) */
+        min-width: 20px; /* largeur minimale pour éviter une trop grande déformation et a 425px les elements se mette en colonne */
         justify-content: center;/*centrer a l'interieur des boutons*/
+        padding: 0px;
+        height: 50px;
     }
 
     .boutons p {
         white-space: nowrap; /* Empêche le texte de passer à la ligne */
     }
 
+/****** INFORMATION ***********/
+
+    .information i {
+        flex-shrink: 0; /* Prevent the icon from shrinking */
+        font-size: 14px;
+    }
+
 /****** HEBERGEMENTS ET POPULAIRES ***********/
 
     .hebergements-and-populaires {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column-reverse;/*echanger la section les plus populaires et hebergements a marseille*/
         gap: 15px;
     }
 
@@ -153,7 +173,7 @@
 /****** HEBERGEMENTS ***********/
   
     .hebergements-cards {
-        display: block;
+        grid-template-columns: 1fr;
     }
 
     section.hebergements {
@@ -162,20 +182,19 @@
   
 /****** ACTIVITES A MARSEILLE ***********/  
 
-    .activites-cards .card {
-        padding: 0px;
-        margin: 30px 0;
-        width: 100%;
-        max-height: 200px;
-    }  
-    
-    .activites-cards img {
-        max-height: 150px;
-    }
-            
-    .activites-cards {
-        display:block;
-    }
+.activites-cards .card {
+    padding: 0px;
+    margin: 30px 0;
+    width: 100%;
+}  
+
+.activites-cards img {
+    max-height: 150px;
+}
+        
+.activites-cards {
+    display:block;
+}
 
 /****** FOOTER ***********/
 
@@ -183,16 +202,3 @@
        display: block;
     }
 }
-
-  
-
-
-
-
-
-
-
-
-
-
-
