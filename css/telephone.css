@@ -3,33 +3,32 @@
     body {
         min-width: 320px;
         max-width: 769px;
-        padding: 0 ;  
     }
 
     .main-container {
-        padding: 0;
+        padding: 0;/*pour enlever les marges de toute la page*/
     }
     
 /****** HEADER ***********/
 
     main {
-        padding: 0 20px;
+        padding: 0 20px;/* pour avoir uen marge seulement de chaque côter sur la 1er section*/
     }
     
     .logo-booki {
-        text-align: center;
+        text-align: center;/*pour centrer le logo au milieu du site*/
         margin-bottom: 15px;
         margin-top: 30px;
     }
 
-    .logo-booki img {
+    .logo-booki img {/*dimenssion du logo*/
         height: 20px;
         width: 65px;
     }
 
     header {
         display: flex;
-        flex-direction: column;
+        flex-direction: column;/*la nav se retrouve en dessous du logo*/
         margin-bottom: 80px;
     }
     
@@ -38,61 +37,60 @@
     }
     
     ul#menu {
-        display: flex;
-        justify-content: space-between;
+        display: flex;/*affichage du menu en ligne*/
+        justify-content:space-between ;/*repartie sur toute la largeur*/
         width: 100%;
         padding: 0;
         margin: 0;
-     }
+        gap: 0px;/*pour que le trait bleu soit côte a côte au survol*/
+    }
     
-    #menu li {
+    #menu li {/*chaque elements a une place egale et centrer*/
         flex: 1;
         text-align: center;
     }
     
     #menu a {
-        display: block;
-        padding: 15px 0;
-        position: relative;
+        display: block;/*pour que la nav soit cliquable partout et pas que le lien */
+        padding: 15px 0;/*espace en haut et en bas*/
+        position: relative;/*positionne le trait bleu sous le lien avec ::after*/
     }
    
     #menu a:hover {
-       
-        border-top: none; /* Remove any top border on hover */
+        border-top: none; /*supression de la barre d'origine*/
     }
     
-    #menu a:hover::after {
-        content: "";
-        position: absolute;
-        bottom: -1px; /* Position it to overlap the gray line */
+    #menu a:hover::after {/*ajout du trait bleu sous la nav*/
+        content: "";/*creation d'un element invisible qui n'existe pas dans le html  (pour la suite de mon trait) c'est une "obligation" pour que after fonctionne */
+        position: absolute;/* sont parents est en position relative je doit donc appliquer une position absolute pour que ca fonctionne*/
+        bottom: -1px; 
         left: 0;
         width: 100%;
-        height: 3px;
-        background-color: #0065FC;
+        border: solid 2px #0065FC ;
     }
     
 /****** BARRE DE RECHERCHE ***********/
 
-   .desktop-only {
+   .desktop-only {/* ajout de desktop et mobile only dans le html pour ajouter la loupe*/
         display: none;/*supprime le bouton rechercher pour faire place a la loupe*/
     }
     
     .mobile-only {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: flex;/*centre la loupe*/
+        justify-content: center;/*centre la loupe*/
+        align-items: center;/*centre la loupe*/
         color: white;
         background-color: #0065FC;
         border: none;
         border-radius: 15px;
         height: 50px;
         width: 50px;
-        margin-left: -5px;
+        margin-left: -5px;/*pour ne pas avoir d'espace entre la barre de recherche et le block de la loupe*/
         font-size: 18px;
         cursor: pointer;
     }
 
-    .formulaire {
+    .formulaire {/*taille de la barre de recherche*/
         min-width: 320px;
         max-width: 100%;
     }
@@ -102,10 +100,10 @@
     }
 
     input.recherche-marseille {
-        max-width: 200px;
+        max-width: 200px;/*jai mis une width fixe car sinon elle deborde a 320px*/
     }
 
-/****** IITRE H1 ***********/  
+/****** TITRE H1 ***********/  
 
     .titre-1 {
         margin-top: -20px;
@@ -116,33 +114,32 @@
     .titre-filtre {
         flex-direction: column;
         margin-top: 15px;/*espace entre la barre de recherche et filtres*/
-       
     }
 
     .quatre-boutons {
         display: flex;
-        flex-wrap: wrap;
-        gap: 10px;/*si je passe a15 les elements serait en colonne*/
+        flex-wrap: wrap;/*passage en ligne*/
+        gap: 10px;/*si je passe a 15 les elements serait en colonne*/
         height: auto;
         margin-top: -15px;/*espace entre filtres et les boutons*/
     }
 
     .boutons {
-        flex: 1 0 calc(50% - 5px); /* flex-grow peut grandir pour remplir l’espace disponible, flex-shrink élément ne rétrécit pas si l’espace manque, flex-basisa taille de base de l’élément (environ la moitié du conteneur, moins l’écart) */
-        min-width: 20px; /* largeur minimale pour éviter une trop grande déformation et a 425px les elements se mette en colonne */
+        flex: 1 0 calc(50% - 5px); /* flex-grow peut grandir pour remplir l’espace disponible, flex-shrink élément ne rétrécit pas si l’espace manque, flex-basisa taille de base de l’élément (environ la moitié du conteneur, moins l’écart) pour que chaque boutons prenne la moitier de la largeur*/
         justify-content: center;/*centrer a l'interieur des boutons*/
         padding: 0px;
         height: 50px;
     }
 
     .boutons p {
-        white-space: nowrap; /* Empêche le texte de passer à la ligne */
+        white-space: nowrap; /* empeche le texte de passer a la ligne */
+        font-size: 14px;
     }
 
 /****** INFORMATION ***********/
 
     .information i {
-        flex-shrink: 0; /* Prevent the icon from shrinking */
+        flex-shrink: 0;/* je l'utilise parceque a 475px mon rond se deformais 0 car je force mon element a garder sa taille meme si l'espace diminue*/
         font-size: 14px;
     }
 
@@ -165,7 +162,7 @@
     }
 
     .populaires-cards {
-       display: block;
+       display: block;/*mettre en colones les 3 cards*/
        width: 100%;
     }
  
@@ -173,7 +170,7 @@
 /****** HEBERGEMENTS ***********/
   
     .hebergements-cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;/*passage en colonnes de tout les elements*/
     }
 
     section.hebergements {
@@ -182,19 +179,19 @@
   
 /****** ACTIVITES A MARSEILLE ***********/  
 
-.activites-cards .card {
-    padding: 0px;
-    margin: 30px 0;
-    width: 100%;
-}  
+    .activites-cards .card {
+        padding: 0px;
+        margin: 30px 0;
+        width: 100%;
+    }  
 
-.activites-cards img {
-    max-height: 150px;
-}
-        
-.activites-cards {
-    display:block;
-}
+    .activites-cards img {
+        max-height: 150px;
+    }
+            
+    .activites-cards {
+        display:block;
+    }
 
 /****** FOOTER ***********/
 
@@ -202,3 +199,8 @@
        display: block;
     }
 }
+
+/* Note a moi : sans vouloir modifier le html ::after agit comme un post-it invisible =
+= content: ""; le fait exister == width, height, background-color lui donnent une forme et une couleur.
+!!!Sans content: "";, ::after ne s’afficherait pas!!!*/
+

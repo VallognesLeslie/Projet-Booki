@@ -18,16 +18,13 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
-   
 }
 
 .main-container {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-
 }
-
 
 a {
     color: inherit;
@@ -77,48 +74,47 @@ header {
     width: 160px;
     height: 80px;/*separation du titre h1 et le logo*/
     margin-top: 50px;/*regler la marge du haut pour le logo*/
-     
 }
  
 .logo-booki img {/*taille de l'image*/
-     width:62px;
-     height: 20px;
+    width:62px;
+    height: 20px;
 }
  
 #menu {
-     display: flex;/*sans, hebergements et activite resterais en colonnes*/
-     gap: 68px;/*espace entre hebergements et activites*/
-     list-style: none;/*enlever les puces*/
-     width: 344px;
-     height: 35px;
-     padding: 0px 50px;
+    display: flex;/*sans, hebergements et activite resterais en colonnes*/
+    gap: 68px;/*espace entre hebergements et activites*/
+    list-style: none;/*enlever les puces*/
+    width: 344px;
+    height: 35px;
+    padding: 0px 50px;
 }
      
 #menu a:hover {
-     color: #0065FC;/*le menu passe en bleu au survole*/
-     border-top: solid 2px #0065FC;/*l'epaisseur de la bordure au survole*/
-     padding-top: 16px;/*espace entre la hauteur du site et le menu*/
-     font-size: 16px;
-     font-weight: 400;
+    color: #0065FC;/*le menu passe en bleu au survole*/
+    border-top: solid 5px #0065FC;/*l'epaisseur de la bordure au survole*/
+    padding-top: 15px;/*espace entre la hauteur du site et le menu*/
+    font-size: 16px;
+    font-weight: 400;
 }
  
- /****** TITRE PRINCIPAL ***********/
+/****** TITRE PRINCIPAL ***********/
 
 h1 {
-     font-weight: 700;
-     font-size: 22px;
-     color: #000;
-     margin-top: 30px;/*espace entre le logo et le titre*/
-     margin-bottom: -5px;/*espace entre le h1 et le paragraphe*/
-    
+    font-weight: 700;
+    font-size: 22px;
+    color: #000;
+    margin-top: 30px;/*espace entre le logo et le titre*/
+    margin-bottom: -5px;/*espace entre le h1 et le paragraphe*/
 }
- .titre-1 p {
+
+.titre-1 p {
     font-weight: 400;
     font-size: 16px;
     color: #000;
 }
 
- /****** BARRE DE RECHERCHE ***********/
+/****** BARRE DE RECHERCHE ***********/
 
 .barre-de-recherche {
     width: auto ;/* regler la longueur automatiquement*/
@@ -207,7 +203,7 @@ p {
 
 .quatre-boutons :hover {
     background-color: #DEEBFF;/*couleur de fond au survole*/
-    cursor: pointer;/* au survole le curseur change*/
+    cursor: pointer;/* au survole le curseur change pour faire voir que le lien es clicable*/
 }
 
 .boutons i {
@@ -215,34 +211,34 @@ p {
     padding-right: 10px;/*espace du logo et du texte*/
 }
 
- /****** INFORMATION ***********/
+/****** INFORMATION ***********/
  
 .information {
-     display: flex;/*que le logo et le texte soit côte a côte*/
-     height: 25px;
-     gap: 10px ;/* espace entre le logo et le texte*/
-     align-items: center;/*pour que le logo et le texte soit alligner*/
-     margin-bottom: 30px;/*espace du bas avec la prochaine section*/
-     margin-top: 30px;/*espace avec la "div" des filtres*/
-
+    display: flex;/*que le logo et le texte soit côte a côte*/
+    height: 25px;
+    gap: 10px ;/* espace entre le logo et le texte*/
+    align-items: center;/*pour que le logo et le texte soit alligner*/
+    margin-bottom: 30px;/*espace du bas avec la prochaine section*/
+    margin-top: 30px;/*espace avec la "div" des filtres*/
 }
+
 .information p {
-     height: 25px;
-     color: #000;
-     font-size: 16px;
-     font-weight: 400;
-     display: flex;
-     align-items: center;
+    height: 25px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
 }
  
 .fa-info {
-     height: 25px;
-     width: 25px;
-     border-radius: 50%;/*pour faire un rond*/
-     border: solid 1px #d9d9d9;/*couleur et lepaisseur de la bordure*/
-     font-size: 12px;/*pour la grosseur du "i"*/
-     text-align: center;/*sans, il serait centrer a gauche du rond*/
-     align-content: center;/*sans, il serait centrer en haut du rond*/
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;/*pour faire un rond*/
+    border: solid 1px #d9d9d9;/*couleur et lepaisseur de la bordure*/
+    font-size: 12px;/*pour la grosseur du "i"*/
+    text-align: center;/*sans, il serait centrer a gauche du rond*/
+    align-content: center;/*sans, il serait centrer en haut du rond*/
 }
 
 /****** Hebergements And Populaires ***********/
@@ -263,38 +259,39 @@ p {
 /****** Hebergements ***********/
 
 .hebergements-title {
-    margin-top: 0;
-    margin-bottom: 35px;
+    margin-top: 0;/*supprime l'espace au-dessus du titre*/
+    margin-bottom: 35px;/*ajoute un espace sous le titre pour qu'il ne colle pas aux cards*/
 }
+
 .hebergements {
-    overflow: hidden;
+    overflow: hidden;/*empeche le débordement, sans la section reste fixe et n'est pas responsive*/
 }
 
 .hebergements-cards {
-    display: grid;
+    display: grid;/*utilisation de grid plus facile pour moi pour faire 3 colonnes de taille egales, 1fr=unite flexible qui ajuste la largeur des colonnes proportionnellement a l’espace dispo*/
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .hebergements-cards .card {
-    display: flex;
+    display: flex;/*ici j'utilise flexbox pour l'organisation de mon contenu*/
     flex-direction: column;
-    height: 100%;  /* Make all cards the same height */
+    height: 100%;  
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    background-color: white; /* Add background color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* centrer,ombarage et floutage/ rgba: couleur noir transparente a 10%*/
+    overflow: hidden;/*evite que l'image depasse des bordures*/
+    transition: transform 0.3s ease-in-out; /* effet de lenteur au survole*/
+    background-color: #FFFF; 
 }
 
 .hebergements-cards .card:hover {
-    transform: scale(1.03);
+    transform: scale(1.03);/*agrandit un peu la card au survol +3%*/
 }
 
 .hebergements-cards img {
-    width: 100%;
+    width: 100%;/*prend toute la largeur de la card*/
     height: 120px;
-    object-fit: cover;
+    object-fit: cover;/*evite la deformation de l'image, sans debordement*/
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -303,7 +300,7 @@ p {
     padding: 15px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Allow content to expand */
+    flex-grow: 1; /*pour remplir l'espace dispo dans la card ,le contenu s'etire pour remplir cet espace*/
 }
 
 .hebergements-cards .card-title {
@@ -330,6 +327,7 @@ p {
 }
 
 /****** Populaires ***********/
+
 .populaires {
     width: 32%;
     min-width: 290px;
@@ -345,7 +343,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
- }
+}
 
 .populaires-cards .card {
     display: flex;
@@ -370,7 +368,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing:border-box ;
+    box-sizing:border-box ;/*evite le depassement involontaire du conteneur, pour faciliter le responsive */
 }
 
 .populaires-cards .card-title {
@@ -402,8 +400,8 @@ p {
 }
 
 .activites-cards .card {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* centrer,ombarage et floutage/ rgba: couleur noir transparente a 10%*/
+    overflow: hidden;/*evite que l'image depasse des bordures*/  
     transition: transform 0.3s ease-in-out; 
     padding: 0px;/*pour enlever la bordure blanche autour de l'image*/
 }
@@ -416,11 +414,12 @@ p {
     height: 50px;
     display: flex;
     align-items: center;
-  }
+}
+
 .activites-cards img {
     width: 100%; 
     height: 380px;
-    object-fit: cover;
+    object-fit: cover;/*evite la deformation de l'image, sans debordement*/
     border-radius: 20px 20px 0 0;  
 }
 
@@ -436,7 +435,6 @@ a.marseille {
 /****** FOOTER ***********/
 
 footer {
-    
     background-color: #F2F2F2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -2,7 +2,7 @@
 
 @media screen and (max-width: 1024px){
     body {
-        max-width: 1024px;
+        max-width: 1024px;/*limitation de la largeur pour eviter l'etalement*/
     }
     
     /****** HEADER ***********/    
@@ -10,7 +10,7 @@
         #menu {
             display: flex;
             gap: 40px;
-            list-style: none;
+         
             width: 300px;
         }
 
@@ -42,10 +42,8 @@
         }
         
         .hebergements-cards .card-title {
-            font-size: 14px; /* ou 13px si nécessaire */
-            white-space: nowrap; /* force le texte à rester sur une ligne */
-            overflow: hidden;
-            text-overflow: ellipsis;
+            font-size: 14px; /* 14 au lieu de 16 car a 16 sa deforme mes cards alors obliger de trouver une solution */
+            white-space: nowrap; /* force le texte à rester sur une ligne, sinon toute mes card se deforme */
         }
 
         .hebergements-cards .card-subtitle {
@@ -59,13 +57,12 @@
     
         .populaires {
             width: 100%;
-            
         }
     
         .populaires-cards {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-around;/*espace egal entre tout les elements*/
         }
     
         .populaires-cards a {
@@ -77,7 +74,7 @@
         }
     
         .populaires-cards .card-subtitle {
-            font-size: 13px;
+            font-size: 14px;
         }
        
     /****** ACTIVITE A MARSEILLE ***********/
